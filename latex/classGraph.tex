@@ -1,0 +1,222 @@
+\hypertarget{classGraph}{}\doxysection{Graph Class Reference}
+\label{classGraph}\index{Graph@{Graph}}
+
+
+\mbox{\hyperlink{classGraph}{Graph}} to represent all the flights.  
+
+
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGraph_a2ab250ab4f7555880ab1c17b6591d6ef}\label{classGraph_a2ab250ab4f7555880ab1c17b6591d6ef}} 
+\mbox{\hyperlink{classVertex}{Vertex}} $\ast$ {\bfseries find\+Vertex} (\mbox{\hyperlink{classAirport}{Airport}} \&in) const
+\item 
+\mbox{\Hypertarget{classGraph_abb5e0517e2979c54eebdafc2a9875e8f}\label{classGraph_abb5e0517e2979c54eebdafc2a9875e8f}} 
+int {\bfseries get\+Num\+Vertex} () const
+\item 
+\mbox{\Hypertarget{classGraph_af350e4caeda21483b65a66b7cf462c2c}\label{classGraph_af350e4caeda21483b65a66b7cf462c2c}} 
+void {\bfseries add\+Vertex} (\mbox{\hyperlink{classAirport}{Airport}} \&in)
+\item 
+\mbox{\Hypertarget{classGraph_adbb6da64f05e3f239524888fcfc74791}\label{classGraph_adbb6da64f05e3f239524888fcfc74791}} 
+bool {\bfseries remove\+Vertex} (\mbox{\hyperlink{classAirport}{Airport}} \&in)
+\item 
+bool \mbox{\hyperlink{classGraph_ac4b5868175ab271d5cc021a1898a325b}{add\+Edge}} (\mbox{\hyperlink{classAirport}{Airport}} \&source, \mbox{\hyperlink{classAirport}{Airport}} \&dest, \mbox{\hyperlink{classAirline}{Airline}} h)
+\item 
+\mbox{\Hypertarget{classGraph_a189387500644298d3bf27fb04f4ec505}\label{classGraph_a189387500644298d3bf27fb04f4ec505}} 
+bool {\bfseries remove\+Edge} (\mbox{\hyperlink{classAirport}{Airport}} \&source, \mbox{\hyperlink{classAirport}{Airport}} \&dest)
+\item 
+map$<$ string, \mbox{\hyperlink{classVertex}{Vertex}} $\ast$ $>$ \mbox{\hyperlink{classGraph_a91a1ec0c1446c3f55e8dffd7916a9f67}{get\+Vertex\+Set}} () const
+\item 
+\mbox{\Hypertarget{classGraph_a0646533a2058d4614380ba4ee23facc0}\label{classGraph_a0646533a2058d4614380ba4ee23facc0}} 
+void {\bfseries dfs} (\mbox{\hyperlink{classAirport}{Airport}} air)
+\item 
+\mbox{\hyperlink{classVertex}{Vertex}} $\ast$ \mbox{\hyperlink{classGraph_adc3c685facfb0c5b3adc2df1312325be}{max\+Distance}} (\mbox{\hyperlink{classAirport}{Airport}} air)
+\item 
+set$<$ vector$<$ \mbox{\hyperlink{classVertex}{Vertex}} $\ast$ $>$ $>$ \mbox{\hyperlink{classGraph_a882dbd76eeee67e61fd5284f4c83b21d}{min\+Distance}} (\mbox{\hyperlink{classAirport}{Airport}} dep, \mbox{\hyperlink{classAirport}{Airport}} arr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classGraph}{Graph}} to represent all the flights. 
+
+Definition at line 99 of file Graph.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGraph_ac4b5868175ab271d5cc021a1898a325b}\label{classGraph_ac4b5868175ab271d5cc021a1898a325b}} 
+\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily bool Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAirport}{Airport}} \&}]{source,  }\item[{\mbox{\hyperlink{classAirport}{Airport}} \&}]{dest,  }\item[{\mbox{\hyperlink{classAirline}{Airline}}}]{h }\end{DoxyParamCaption})}
+
+Adds an edge to current graph with the given source and destination and with an airline 
+\begin{DoxyParams}{Parameters}
+{\em src} & \mbox{\hyperlink{classEdge}{Edge}} source \\
+\hline
+{\em dest} & \mbox{\hyperlink{classEdge}{Edge}} destination \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 100 of file Graph.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{100                                                              \{}
+\DoxyCodeLine{101     \textcolor{keywordflow}{if} (findVertex(source) != \textcolor{keyword}{nullptr} \&\& findVertex(dest) != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{102         findVertex(source)-\/>\mbox{\hyperlink{classVertex_aa4268d04bef6163272b44e7e9740fa9b}{addEdge}}(findVertex(dest),h);}
+\DoxyCodeLine{103         \textcolor{comment}{//findVertex(dest)-\/>addArrival(findVertex(source), h);}}
+\DoxyCodeLine{104         findVertex(dest)-\/>\mbox{\hyperlink{classVertex_afae5197a2bdeaae6d19900ef0133c7ea}{addArrival}}();}
+\DoxyCodeLine{105         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{106     \}}
+\DoxyCodeLine{107     \textcolor{comment}{// HINT: use findVertex to obtain the actual vertices}}
+\DoxyCodeLine{108     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{109 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classGraph_a91a1ec0c1446c3f55e8dffd7916a9f67}\label{classGraph_a91a1ec0c1446c3f55e8dffd7916a9f67}} 
+\index{Graph@{Graph}!getVertexSet@{getVertexSet}}
+\index{getVertexSet@{getVertexSet}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getVertexSet()}{getVertexSet()}}
+{\footnotesize\ttfamily map$<$ string, \mbox{\hyperlink{classVertex}{Vertex}} $\ast$ $>$ Graph\+::get\+Vertex\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+map with all Verteces 
+\end{DoxyReturn}
+
+
+Definition at line 13 of file Graph.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13                                                \{}
+\DoxyCodeLine{14     \textcolor{keywordflow}{return} vertexSet;}
+\DoxyCodeLine{15 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classGraph_adc3c685facfb0c5b3adc2df1312325be}\label{classGraph_adc3c685facfb0c5b3adc2df1312325be}} 
+\index{Graph@{Graph}!maxDistance@{maxDistance}}
+\index{maxDistance@{maxDistance}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{maxDistance()}{maxDistance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVertex}{Vertex}} $\ast$ Graph\+::max\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAirport}{Airport}}}]{air }\end{DoxyParamCaption})}
+
+Function used to find the journey with the most stopovers possible from the airport received. To do this, a Breadth-\/first search is used The longest distance is stored in the vertex distance variable Time Complexity\+: O(V + E), where V is the number of vertices and E is the number of edges in the graph 
+\begin{DoxyParams}{Parameters}
+{\em air} & Departure airport \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVertex}{Vertex}} containing the destination airport of the journey with the most stopovers from the received airport. 
+\end{DoxyReturn}
+
+
+Definition at line 125 of file Graph.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{125                                       \{}
+\DoxyCodeLine{126     \mbox{\hyperlink{classVertex}{Vertex}}* airport;}
+\DoxyCodeLine{127     queue<Airport> q;}
+\DoxyCodeLine{128     q.push(air);}
+\DoxyCodeLine{129     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} v : vertexSet) \{}
+\DoxyCodeLine{130         v.second-\/>setVisited(\textcolor{keyword}{false});}
+\DoxyCodeLine{131         v.second-\/>distance = 0;}
+\DoxyCodeLine{132     \}}
+\DoxyCodeLine{133     \mbox{\hyperlink{classVertex}{Vertex}}* v = findVertex(air);}
+\DoxyCodeLine{134     v-\/>distance = 0;}
+\DoxyCodeLine{135     v-\/>setVisited(\textcolor{keyword}{true});}
+\DoxyCodeLine{136     \textcolor{keywordflow}{while} (!q.empty()) \{}
+\DoxyCodeLine{137         \mbox{\hyperlink{classAirport}{Airport}} air2 = q.front();}
+\DoxyCodeLine{138         q.pop();}
+\DoxyCodeLine{139         \mbox{\hyperlink{classVertex}{Vertex}}* u = findVertex(air2);}
+\DoxyCodeLine{140         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} e : u-\/>\mbox{\hyperlink{classVertex_a25cb5b7136d1a53fcf2ccd437ea95641}{getAdj}}()) \{}
+\DoxyCodeLine{141             \textcolor{keywordflow}{if} (!e.getDest()-\/>isVisited()) \{}
+\DoxyCodeLine{142                 q.push(e.getDest()-\/>getInfo());}
+\DoxyCodeLine{143                 e.getDest()-\/>setVisited(\textcolor{keyword}{true});}
+\DoxyCodeLine{144                 e.getDest()-\/>distance = u-\/>distance + 1;}
+\DoxyCodeLine{145                 airport = e.getDest();}
+\DoxyCodeLine{146             \}}
+\DoxyCodeLine{147         \}}
+\DoxyCodeLine{148     \}}
+\DoxyCodeLine{149     \textcolor{keywordflow}{return} airport;}
+\DoxyCodeLine{150 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classGraph_a882dbd76eeee67e61fd5284f4c83b21d}\label{classGraph_a882dbd76eeee67e61fd5284f4c83b21d}} 
+\index{Graph@{Graph}!minDistance@{minDistance}}
+\index{minDistance@{minDistance}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{minDistance()}{minDistance()}}
+{\footnotesize\ttfamily set$<$ vector$<$ \mbox{\hyperlink{classVertex}{Vertex}} $\ast$ $>$ $>$ Graph\+::min\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAirport}{Airport}}}]{dep,  }\item[{\mbox{\hyperlink{classAirport}{Airport}}}]{arr }\end{DoxyParamCaption})}
+
+Function used to find the journey with the fewest stops between the airports received. The shorter distance is stored in the vertex distance variable Time Complexity\+: O(V + E), where V is the number of vertices and E is the number of edges in the graph. 
+\begin{DoxyParams}{Parameters}
+{\em dep} & Departure airport \\
+\hline
+{\em arr} & Arrival airport \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sets that store the vectors containing the airports of the routes obtained 
+\end{DoxyReturn}
+
+
+Definition at line 152 of file Graph.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{152                                                                 \{}
+\DoxyCodeLine{153     queue<Airport> q;}
+\DoxyCodeLine{154     set<vector<Vertex*>> paths;}
+\DoxyCodeLine{155     q.push(dep);}
+\DoxyCodeLine{156     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} v : vertexSet) \{}
+\DoxyCodeLine{157         v.second-\/>setVisited(\textcolor{keyword}{false});}
+\DoxyCodeLine{158         v.second-\/>distance = 0;}
+\DoxyCodeLine{159         v.second-\/>parent = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{160     \}}
+\DoxyCodeLine{161     \mbox{\hyperlink{classVertex}{Vertex}}* v = findVertex(dep);}
+\DoxyCodeLine{162     v-\/>distance = 0;}
+\DoxyCodeLine{163     v-\/>setVisited(\textcolor{keyword}{true});}
+\DoxyCodeLine{164     \textcolor{keywordflow}{while} (!q.empty()) \{}
+\DoxyCodeLine{165         \mbox{\hyperlink{classAirport}{Airport}} air2 = q.front();}
+\DoxyCodeLine{166         q.pop();}
+\DoxyCodeLine{167         \mbox{\hyperlink{classVertex}{Vertex}}* u = findVertex(air2);}
+\DoxyCodeLine{168         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} e : u-\/>\mbox{\hyperlink{classVertex_a25cb5b7136d1a53fcf2ccd437ea95641}{getAdj}}()) \{}
+\DoxyCodeLine{169             \textcolor{keywordflow}{if} (!e.getDest()-\/>isVisited()) \{}
+\DoxyCodeLine{170                 q.push(e.getDest()-\/>getInfo());}
+\DoxyCodeLine{171                 e.getDest()-\/>setVisited(\textcolor{keyword}{true});}
+\DoxyCodeLine{172                 e.getDest()-\/>distance = u-\/>distance + 1;}
+\DoxyCodeLine{173                 e.getDest()-\/>parent = u;}
+\DoxyCodeLine{174                 \textcolor{keywordflow}{if} (e.getDest()-\/>getInfo() == arr)\{}
+\DoxyCodeLine{175                     vector<Vertex*> path;}
+\DoxyCodeLine{176                     \textcolor{keywordflow}{if} (e.getDest()-\/>distance != 1) e.getDest()-\/>setVisited(\textcolor{keyword}{false});}
+\DoxyCodeLine{177                     \textcolor{keywordflow}{while} (e.getDest() != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{178                         path.insert(path.begin(), e.getDest());}
+\DoxyCodeLine{179                         e.dest = e.getDest()-\/>parent;}
+\DoxyCodeLine{180                     \}}
+\DoxyCodeLine{181                     paths.insert(path);}
+\DoxyCodeLine{182                 \}}
+\DoxyCodeLine{183             \}}
+\DoxyCodeLine{184         \}}
+\DoxyCodeLine{185     \}}
+\DoxyCodeLine{186     \textcolor{comment}{/*for (vector<Vertex*> i : paths) \{}}
+\DoxyCodeLine{187 \textcolor{comment}{        for (Vertex* b : i) \{}}
+\DoxyCodeLine{188 \textcolor{comment}{            cout << b-\/>getInfo().getcode() << "{} -\/> "{};}}
+\DoxyCodeLine{189 \textcolor{comment}{            //else cout << b-\/>getInfo().getcode() << '\(\backslash\)n';}}
+\DoxyCodeLine{190 \textcolor{comment}{        \}}}
+\DoxyCodeLine{191 \textcolor{comment}{        cout << "{}Stops of the trip: "{} << i.size() -\/ 2 << '\(\backslash\)n';}}
+\DoxyCodeLine{192 \textcolor{comment}{    \}*/}}
+\DoxyCodeLine{193     \textcolor{keywordflow}{return} paths;}
+\DoxyCodeLine{194 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Graph.\+h\item 
+Graph.\+cpp\end{DoxyCompactItemize}

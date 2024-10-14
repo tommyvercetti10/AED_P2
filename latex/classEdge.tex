@@ -1,0 +1,105 @@
+\hypertarget{classEdge}{}\doxysection{Edge Class Reference}
+\label{classEdge}\index{Edge@{Edge}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEdge_a6135e359e023e71bc0cfb27bacd1a9ee}{Edge}} (\mbox{\hyperlink{classVertex}{Vertex}} $\ast$d, \mbox{\hyperlink{classAirline}{Airline}} h)
+\item 
+\mbox{\hyperlink{classVertex}{Vertex}} $\ast$ \mbox{\hyperlink{classEdge_a5cda44e9ba257b03963a1ac301371a59}{get\+Dest}} () const
+\item 
+\mbox{\Hypertarget{classEdge_a1ecc1e562c2f7f07d6897dd9e54e7cbd}\label{classEdge_a1ecc1e562c2f7f07d6897dd9e54e7cbd}} 
+void {\bfseries set\+Dest} (\mbox{\hyperlink{classVertex}{Vertex}} $\ast$dest)
+\item 
+\mbox{\hyperlink{classAirline}{Airline}} \mbox{\hyperlink{classEdge_abaa980628bfa3697b6a76b0d238f2822}{get\+Weight}} () const
+\item 
+\mbox{\Hypertarget{classEdge_a6cfb538dd3108532065303adc4cb0ce1}\label{classEdge_a6cfb538dd3108532065303adc4cb0ce1}} 
+void {\bfseries set\+Weight} (\mbox{\hyperlink{classAirline}{Airline}} weight)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEdge_afab89afd724f1b07b1aaad6bdc61c47a}\label{classEdge_afab89afd724f1b07b1aaad6bdc61c47a}} 
+class \mbox{\hyperlink{classEdge_afab89afd724f1b07b1aaad6bdc61c47a}{Graph}}
+\begin{DoxyCompactList}\small\item\em Declaration of the \mbox{\hyperlink{classGraph}{Graph}} class to access the private members of this class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEdge_a1251d18f08324022e8e73506c3768f3c}\label{classEdge_a1251d18f08324022e8e73506c3768f3c}} 
+class \mbox{\hyperlink{classEdge_a1251d18f08324022e8e73506c3768f3c}{Vertex}}
+\begin{DoxyCompactList}\small\item\em Declaration of the \mbox{\hyperlink{classVertex}{Vertex}} class to access the private members of this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 76 of file Graph.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEdge_a6135e359e023e71bc0cfb27bacd1a9ee}\label{classEdge_a6135e359e023e71bc0cfb27bacd1a9ee}} 
+\index{Edge@{Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{Edge()}{Edge()}}
+{\footnotesize\ttfamily Edge\+::\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}} $\ast$}]{d,  }\item[{\mbox{\hyperlink{classAirline}{Airline}}}]{h }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classEdge}{Edge}} constructor \begin{DoxyReturn}{Returns}
+d destination of the edge 
+
+h \mbox{\hyperlink{classAirline}{Airline}} associated with that \mbox{\hyperlink{classEdge}{Edge}} and connects the two airports involved 
+\end{DoxyReturn}
+
+
+Definition at line 6 of file Graph.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 : dest(d), weight(h) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEdge_a5cda44e9ba257b03963a1ac301371a59}\label{classEdge_a5cda44e9ba257b03963a1ac301371a59}} 
+\index{Edge@{Edge}!getDest@{getDest}}
+\index{getDest@{getDest}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{getDest()}{getDest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVertex}{Vertex}} $\ast$ Edge\+::get\+Dest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+destination of the edge 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file Graph.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                             \{}
+\DoxyCodeLine{38     \textcolor{keywordflow}{return} dest;}
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEdge_abaa980628bfa3697b6a76b0d238f2822}\label{classEdge_abaa980628bfa3697b6a76b0d238f2822}} 
+\index{Edge@{Edge}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAirline}{Airline}} Edge\+::get\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classAirline}{Airline}} associated with that \mbox{\hyperlink{classEdge}{Edge}} 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file Graph.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                               \{}
+\DoxyCodeLine{46     \textcolor{keywordflow}{return} weight;}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Graph.\+h\item 
+Graph.\+cpp\end{DoxyCompactItemize}

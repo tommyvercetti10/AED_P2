@@ -1,0 +1,290 @@
+\hypertarget{classManagement}{}\doxysection{Management Class Reference}
+\label{classManagement}\index{Management@{Management}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classManagement_ae1777b61db03b0fe8ae22ce6f08e0f01}\label{classManagement_ae1777b61db03b0fe8ae22ce6f08e0f01}} 
+{\bfseries Management} (\mbox{\hyperlink{classReadFiles}{Read\+Files}} \&rf\+\_\+)
+\item 
+\mbox{\Hypertarget{classManagement_a7f70a92f5407276e0bfccce2f58bc6f7}\label{classManagement_a7f70a92f5407276e0bfccce2f58bc6f7}} 
+void \mbox{\hyperlink{classManagement_a7f70a92f5407276e0bfccce2f58bc6f7}{network\+Information}} (int option)
+\begin{DoxyCompactList}\small\item\em Function that gathers the algorithms to obtain the global information of the flight network. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classManagement_a141ca8fbd9b4b788aa7e221036b69760}\label{classManagement_a141ca8fbd9b4b788aa7e221036b69760}} 
+void \mbox{\hyperlink{classManagement_a141ca8fbd9b4b788aa7e221036b69760}{airport\+Informations}} (string airport, int option)
+\begin{DoxyCompactList}\small\item\em Function that puts together the algorithms to obtain information about airports. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classManagement_a5331262b431d65dac6809ffdc9a6f77e}\label{classManagement_a5331262b431d65dac6809ffdc9a6f77e}} 
+void \mbox{\hyperlink{classManagement_a5331262b431d65dac6809ffdc9a6f77e}{country\+Informations}} (string country, int option)
+\begin{DoxyCompactList}\small\item\em function that puts together the algorithms to obtain the information about the countries \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classManagement_a597ba83766c2ecc1e60bb31762b6d505}\label{classManagement_a597ba83766c2ecc1e60bb31762b6d505}} 
+set$<$ string $>$ {\bfseries countries\+For\+Air\+City} (vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ airports)
+\item 
+set$<$ pair$<$ \mbox{\hyperlink{classAirport}{Airport}}, \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ \mbox{\hyperlink{classManagement_ad209e969cd1b003a4f9ae3d351c1a86e}{max\+Stops}} ()
+\item 
+vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ \mbox{\hyperlink{classManagement_a7b18cd0d431ec59626cc5a5ac1d7f773}{best\+Flights}} (string dep\+Air, string arr\+Air)
+\item 
+\mbox{\Hypertarget{classManagement_ae7c8cdb968c3e6c3b1813105b5bdc339}\label{classManagement_ae7c8cdb968c3e6c3b1813105b5bdc339}} 
+\mbox{\hyperlink{classReadFiles}{Read\+Files}} \& {\bfseries get\+Rf} ()
+\item 
+\mbox{\Hypertarget{classManagement_a1d5c2831c08dabd391c6958a256b0908}\label{classManagement_a1d5c2831c08dabd391c6958a256b0908}} 
+int {\bfseries ponto3} (string x)
+\item 
+\mbox{\Hypertarget{classManagement_a1287f453a0a06b9eae3ada29f6324aa1}\label{classManagement_a1287f453a0a06b9eae3ada29f6324aa1}} 
+int {\bfseries ponto6} (string x, int i)
+\item 
+\mbox{\Hypertarget{classManagement_a7e2e46a837d2378d87b781f826db460f}\label{classManagement_a7e2e46a837d2378d87b781f826db460f}} 
+void {\bfseries ponto9} ()
+\item 
+\mbox{\Hypertarget{classManagement_a7fcd0b8c235afa45a5150cd042e5b454}\label{classManagement_a7fcd0b8c235afa45a5150cd042e5b454}} 
+void {\bfseries dfs9} (\mbox{\hyperlink{classGraph}{Graph}} graph, \mbox{\hyperlink{classVertex}{Vertex}} $\ast$v, unordered\+\_\+set$<$ string $>$ \&res, stack$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ s, int \&i)
+\item 
+\mbox{\Hypertarget{classManagement_ad7573fa1c98ae7823e133479ad961a61}\label{classManagement_ad7573fa1c98ae7823e133479ad961a61}} 
+void {\bfseries makeundirected} (\mbox{\hyperlink{classGraph}{Graph}} \&undirectedgraph)
+\item 
+\mbox{\Hypertarget{classManagement_aa7f08ebee5a425daabbd78bc5eed1ee0}\label{classManagement_aa7f08ebee5a425daabbd78bc5eed1ee0}} 
+int {\bfseries get\+Max\+Distance} ()
+\item 
+\mbox{\hyperlink{classVertex}{Vertex}} $\ast$ \mbox{\hyperlink{classManagement_a96919dd611ca6a776f5051555d473b37}{nearest\+Airport}} (double latitude, double longitude)
+\item 
+\mbox{\Hypertarget{classManagement_a4ce458035e56f70a46d9f1681c38fdd6}\label{classManagement_a4ce458035e56f70a46d9f1681c38fdd6}} 
+double \mbox{\hyperlink{classManagement_a4ce458035e56f70a46d9f1681c38fdd6}{haversine}} (double lat1, double lon1, double lat2, double lon2)
+\begin{DoxyCompactList}\small\item\em The Haversine funtion calculates the distance between two points defined by latitude and longitude. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classManagement_af00a41e64bf103e5f8c3b27de990b198}\label{classManagement_af00a41e64bf103e5f8c3b27de990b198}} 
+set$<$ \mbox{\hyperlink{classAirline}{Airline}} $>$ {\bfseries trip\+Airlines} (\mbox{\hyperlink{classAirport}{Airport}} arr, \mbox{\hyperlink{classAirport}{Airport}} dep)
+\item 
+list$<$ \mbox{\hyperlink{classAirline}{Airline}} $>$ \mbox{\hyperlink{classManagement_a89c4cad0b4898f9d66b349e92a79b79d}{full\+Trip\+Airlines}} (vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ airports, bool min)
+\item 
+\mbox{\hyperlink{classAirline}{Airline}} \mbox{\hyperlink{classManagement_a9944bd194338d0ff69771351bee916e5}{min\+Max\+Airline}} (\mbox{\hyperlink{classAirport}{Airport}} arr, \mbox{\hyperlink{classAirport}{Airport}} dep, list$<$ \mbox{\hyperlink{classAirline}{Airline}} $>$ \&airlines)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classManagement_ac2b371e22e1f79a59cc4df1cb967d02a}\label{classManagement_ac2b371e22e1f79a59cc4df1cb967d02a}} 
+static bool {\bfseries compare\+Pair} (pair$<$ \mbox{\hyperlink{classVertex}{Vertex}} $\ast$, int $>$ \&a, pair$<$ \mbox{\hyperlink{classVertex}{Vertex}} $\ast$, int $>$ \&b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 17 of file Management.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classManagement_a7b18cd0d431ec59626cc5a5ac1d7f773}\label{classManagement_a7b18cd0d431ec59626cc5a5ac1d7f773}} 
+\index{Management@{Management}!bestFlights@{bestFlights}}
+\index{bestFlights@{bestFlights}!Management@{Management}}
+\doxysubsubsection{\texorpdfstring{bestFlights()}{bestFlights()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ Management\+::best\+Flights (\begin{DoxyParamCaption}\item[{string}]{dep\+Air,  }\item[{string}]{arr\+Air }\end{DoxyParamCaption})}
+
+Function that calculates the flight with the fewest possible stopovers between the given location 
+\begin{DoxyParams}{Parameters}
+{\em dep\+Air} & departure location \\
+\hline
+{\em arr\+Air} & arrival location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector that stores vectors containing the airports of the best flights 
+\end{DoxyReturn}
+
+
+Definition at line 266 of file Management.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{266                                                                             \{}
+\DoxyCodeLine{267     vector<vector<Airport>> flights;}
+\DoxyCodeLine{268     set<vector<Vertex*>> paths;}
+\DoxyCodeLine{269     vector<Airport> dep = rf.getAirports(depAir);}
+\DoxyCodeLine{270     vector<Airport> arr = rf.getAirports(arrAir);}
+\DoxyCodeLine{271     \textcolor{keywordtype}{int} minStops = 1000;}
+\DoxyCodeLine{272     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < dep.size(); i++) \{}
+\DoxyCodeLine{273         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} b = 0; b < arr.size(); b++) \{}
+\DoxyCodeLine{274             set<vector<Vertex*>> pts = rf.getgraph().\mbox{\hyperlink{classGraph_a882dbd76eeee67e61fd5284f4c83b21d}{minDistance}}(dep[i], arr[b]);}
+\DoxyCodeLine{275             \textcolor{keywordflow}{for} (vector<Vertex*> c : pts) \{}
+\DoxyCodeLine{276                 paths.insert(c);}
+\DoxyCodeLine{277                 \textcolor{keywordflow}{if} (minStops > c.size()) minStops = c.size();}
+\DoxyCodeLine{278             \}}
+\DoxyCodeLine{279         \}}
+\DoxyCodeLine{280     \}}
+\DoxyCodeLine{281     \textcolor{keywordflow}{for} (vector<Vertex*> i : paths) \{}
+\DoxyCodeLine{282         \textcolor{keywordflow}{if} (i.size() == minStops) \{}
+\DoxyCodeLine{283             vector<Airport> airs;}
+\DoxyCodeLine{284             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classVertex}{Vertex}}* b : i) \{}
+\DoxyCodeLine{285                 airs.push\_back(b-\/>getInfo());}
+\DoxyCodeLine{286             \}}
+\DoxyCodeLine{287             flights.push\_back(airs);}
+\DoxyCodeLine{288         \}}
+\DoxyCodeLine{289     \}}
+\DoxyCodeLine{290     \textcolor{keywordflow}{return} flights;}
+\DoxyCodeLine{291 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classManagement_a89c4cad0b4898f9d66b349e92a79b79d}\label{classManagement_a89c4cad0b4898f9d66b349e92a79b79d}} 
+\index{Management@{Management}!fullTripAirlines@{fullTripAirlines}}
+\index{fullTripAirlines@{fullTripAirlines}!Management@{Management}}
+\doxysubsubsection{\texorpdfstring{fullTripAirlines()}{fullTripAirlines()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{classAirline}{Airline}} $>$ Management\+::full\+Trip\+Airlines (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$}]{airports,  }\item[{bool}]{min }\end{DoxyParamCaption})}
+
+Function to obtain the possible airlines on the incoming trip. Used to obtain the airlines that the user can use for the desired journey. The user can choose whether to travel with as many airlines as possible or as few as possible. Time complexity\+: O(n), where n is the number of airports 
+\begin{DoxyParams}{Parameters}
+{\em airports} & airports of the trip \\
+\hline
+{\em min} & bool variable that informs the function if the user wants to change the airline on their trip as few times as possible \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of possible airlines 
+\end{DoxyReturn}
+
+
+Definition at line 294 of file Management.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{294                                                                              \{}
+\DoxyCodeLine{295     map<Airline, int> airlineCount;}
+\DoxyCodeLine{296     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} b = 0; b < airports.size(); b++) \{    \textcolor{comment}{//count of the airlines with the most trips}}
+\DoxyCodeLine{297         \textcolor{keywordflow}{if} (b != airports.size() -\/ 1) \{}
+\DoxyCodeLine{298             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classAirline}{Airline}} airline : tripAirlines(airports[b], airports[b + 1]))}
+\DoxyCodeLine{299                 airlineCount[airline] += 1;}
+\DoxyCodeLine{300         \}}
+\DoxyCodeLine{301         \textcolor{keywordflow}{else} cout << airports[b].getcode() << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{302     \}}
+\DoxyCodeLine{303     \textcolor{keywordtype}{int} max = 0;}
+\DoxyCodeLine{304     list<Airline> airlines;}
+\DoxyCodeLine{305     \textcolor{keywordflow}{for} (pair<Airline, int> p : airlineCount) \{}
+\DoxyCodeLine{306         \textcolor{keywordflow}{if} (p.second >= max) \{}
+\DoxyCodeLine{307             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < p.second; i++)}
+\DoxyCodeLine{308                 min ? airlines.push\_front(p.first) : airlines.push\_back(p.first); \textcolor{comment}{//if the user chooses the min, the airline with the most journeys will go to the front of the list to be chosen}}
+\DoxyCodeLine{309                 max = p.second;}
+\DoxyCodeLine{310         \}}
+\DoxyCodeLine{311         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{312             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < p.second; i++)}
+\DoxyCodeLine{313                 min ? airlines.push\_back(p.first) : airlines.push\_front(p.first);  \textcolor{comment}{//Otherwise, it will be the one with the fewest trips at the front}}
+\DoxyCodeLine{314         \}}
+\DoxyCodeLine{315     \}}
+\DoxyCodeLine{316     \textcolor{keywordflow}{return} airlines;}
+\DoxyCodeLine{317 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classManagement_ad209e969cd1b003a4f9ae3d351c1a86e}\label{classManagement_ad209e969cd1b003a4f9ae3d351c1a86e}} 
+\index{Management@{Management}!maxStops@{maxStops}}
+\index{maxStops@{maxStops}!Management@{Management}}
+\doxysubsubsection{\texorpdfstring{maxStops()}{maxStops()}}
+{\footnotesize\ttfamily set$<$ pair$<$ \mbox{\hyperlink{classAirport}{Airport}}, \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ Management\+::max\+Stops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that gathers the routes with the most possible stops It also calculates the number of stops on these routes and stores it in the max\+Distance variable. \begin{DoxyReturn}{Returns}
+pairs with the departure and final airports for these trips 
+\end{DoxyReturn}
+
+
+Definition at line 246 of file Management.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{246                                                  \{}
+\DoxyCodeLine{247     set<pair<Airport, Airport>> airs;}
+\DoxyCodeLine{248     \textcolor{keywordtype}{int} maxDistance = 0;}
+\DoxyCodeLine{249     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} v : rf.getgraph().\mbox{\hyperlink{classGraph_a91a1ec0c1446c3f55e8dffd7916a9f67}{getVertexSet}}()) \{}
+\DoxyCodeLine{250         \mbox{\hyperlink{classVertex}{Vertex}}* possibleDest = rf.getgraph().\mbox{\hyperlink{classGraph_adc3c685facfb0c5b3adc2df1312325be}{maxDistance}}(v.second-\/>getInfo());}
+\DoxyCodeLine{251         \textcolor{keywordflow}{if} (possibleDest-\/>\mbox{\hyperlink{classVertex_af9405dc0ec7ebc2aa7562bd918dfb93f}{getDistance}}() >= maxDistance)}
+\DoxyCodeLine{252         \{}
+\DoxyCodeLine{253             \textcolor{keywordflow}{if} (possibleDest-\/>\mbox{\hyperlink{classVertex_af9405dc0ec7ebc2aa7562bd918dfb93f}{getDistance}}() > maxDistance) airs.clear();}
+\DoxyCodeLine{254             airs.insert(make\_pair(v.second-\/>getInfo(), possibleDest-\/>\mbox{\hyperlink{classVertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}()));}
+\DoxyCodeLine{255             \textcolor{comment}{/*cout << v.second-\/>getInfo().getcity() + "{} to "{} + possibleDest-\/>getInfo().getcity()}}
+\DoxyCodeLine{256 \textcolor{comment}{            + "{}Stops:"{} << possibleDest-\/>getDistance() << '\(\backslash\)n';}}
+\DoxyCodeLine{257 \textcolor{comment}{            maxDistance = possibleDest-\/>getDistance(); */}}
+\DoxyCodeLine{258         \}}
+\DoxyCodeLine{259     \}}
+\DoxyCodeLine{260     this-\/>maxDistance = maxDistance;}
+\DoxyCodeLine{261     \textcolor{comment}{//cout << "{}Number of trips with maximum stops: "{} << airs.size() << '\(\backslash\)n';}}
+\DoxyCodeLine{262     \textcolor{keywordflow}{return} airs;}
+\DoxyCodeLine{263 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classManagement_a9944bd194338d0ff69771351bee916e5}\label{classManagement_a9944bd194338d0ff69771351bee916e5}} 
+\index{Management@{Management}!minMaxAirline@{minMaxAirline}}
+\index{minMaxAirline@{minMaxAirline}!Management@{Management}}
+\doxysubsubsection{\texorpdfstring{minMaxAirline()}{minMaxAirline()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAirline}{Airline}} Management\+::min\+Max\+Airline (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAirport}{Airport}}}]{arr,  }\item[{\mbox{\hyperlink{classAirport}{Airport}}}]{dep,  }\item[{list$<$ \mbox{\hyperlink{classAirline}{Airline}} $>$ \&}]{airlines }\end{DoxyParamCaption})}
+
+Function to find the airline with the most or least trips between the given locations 
+\begin{DoxyParams}{Parameters}
+{\em arr} & arrival airport \\
+\hline
+{\em dep} & departure airport \\
+\hline
+{\em airlines} & list of airlines sorted in ascending or descending order according to the number of trips between the given locations, depending on what the user has chosen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+airline with the most or least trips between the given locations 
+\end{DoxyReturn}
+
+
+Definition at line 320 of file Management.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{320                                                                                    \{}
+\DoxyCodeLine{321     \textcolor{keyword}{auto} it = airlines.begin();}
+\DoxyCodeLine{322     \mbox{\hyperlink{classAirline}{Airline}} airline = *it;}
+\DoxyCodeLine{323     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{324         \mbox{\hyperlink{classVertex}{Vertex}}* arrVertex = getRf().getgraph().findVertex(arr);}
+\DoxyCodeLine{325         \mbox{\hyperlink{classVertex}{Vertex}}* depVertex = getRf().getgraph().findVertex(dep);}
+\DoxyCodeLine{326         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classEdge}{Edge}} e : arrVertex-\/>\mbox{\hyperlink{classVertex_a25cb5b7136d1a53fcf2ccd437ea95641}{getAdj}}()) \{}
+\DoxyCodeLine{327             \textcolor{keywordflow}{if} (e.getWeight() == airline \&\& e.getDest() == depVertex) \{}
+\DoxyCodeLine{328                 airlines.erase(it);}
+\DoxyCodeLine{329                 \textcolor{keywordflow}{return} airline;}
+\DoxyCodeLine{330             \}}
+\DoxyCodeLine{331         \}}
+\DoxyCodeLine{332         it++;}
+\DoxyCodeLine{333         airline = *it;}
+\DoxyCodeLine{334     \}}
+\DoxyCodeLine{335 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classManagement_a96919dd611ca6a776f5051555d473b37}\label{classManagement_a96919dd611ca6a776f5051555d473b37}} 
+\index{Management@{Management}!nearestAirport@{nearestAirport}}
+\index{nearestAirport@{nearestAirport}!Management@{Management}}
+\doxysubsubsection{\texorpdfstring{nearestAirport()}{nearestAirport()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVertex}{Vertex}} $\ast$ Management\+::nearest\+Airport (\begin{DoxyParamCaption}\item[{double}]{latitude,  }\item[{double}]{longitude }\end{DoxyParamCaption})}
+
+Function that calculates the nearest airport to the point received, which is defined by latitude and longitude. 
+\begin{DoxyParams}{Parameters}
+{\em latitude} & \\
+\hline
+{\em longitude} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVertex}{Vertex}} of the airport closest to the given point 
+\end{DoxyReturn}
+
+
+Definition at line 367 of file Management.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{367                                                                     \{}
+\DoxyCodeLine{368     \textcolor{keywordtype}{double} minDistance = std::numeric\_limits<double>::max();}
+\DoxyCodeLine{369     \mbox{\hyperlink{classVertex}{Vertex}}* nearestVertex;}
+\DoxyCodeLine{370     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} v : rf.getgraph().\mbox{\hyperlink{classGraph_a91a1ec0c1446c3f55e8dffd7916a9f67}{getVertexSet}}()) \{}
+\DoxyCodeLine{371         \textcolor{keywordtype}{double} tmp =\mbox{\hyperlink{classManagement_a4ce458035e56f70a46d9f1681c38fdd6}{haversine}}(latitude, longitude, stod(v.second-\/>getInfo().getlatitude()), stod(v.second-\/>getInfo().getlongitude()));}
+\DoxyCodeLine{372         \textcolor{keywordflow}{if} (tmp < minDistance) \{}
+\DoxyCodeLine{373             minDistance = tmp;}
+\DoxyCodeLine{374             nearestVertex = v.second;}
+\DoxyCodeLine{375         \}}
+\DoxyCodeLine{376     \}}
+\DoxyCodeLine{377     \textcolor{keywordflow}{return} nearestVertex;}
+\DoxyCodeLine{378 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Management.\+h\item 
+Management.\+cpp\end{DoxyCompactItemize}

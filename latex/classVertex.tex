@@ -1,0 +1,230 @@
+\hypertarget{classVertex}{}\doxysection{Vertex Class Reference}
+\label{classVertex}\index{Vertex@{Vertex}}
+
+
+Vertices representing airports.  
+
+
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVertex_ae2f4457998996cf77127f3f5a2737c93}{Vertex}} (\mbox{\hyperlink{classAirport}{Airport}} in)
+\item 
+\mbox{\hyperlink{classAirport}{Airport}} \mbox{\hyperlink{classVertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{get\+Info}} () const
+\item 
+\mbox{\Hypertarget{classVertex_ad98f347fdcf0ec1de304434f8f2de864}\label{classVertex_ad98f347fdcf0ec1de304434f8f2de864}} 
+void {\bfseries set\+Info} (\mbox{\hyperlink{classAirport}{Airport}} in)
+\item 
+bool \mbox{\hyperlink{classVertex_aa4bd82105b85ee53a917391f4811cd8a}{is\+Visited}} () const
+\item 
+\mbox{\Hypertarget{classVertex_a3c6d6c2254850a647d3a27007ef940f6}\label{classVertex_a3c6d6c2254850a647d3a27007ef940f6}} 
+void {\bfseries set\+Visited} (bool v)
+\item 
+\mbox{\Hypertarget{classVertex_a126e306f0534b99cd97aa864fdb243d4}\label{classVertex_a126e306f0534b99cd97aa864fdb243d4}} 
+bool {\bfseries is\+Processing} () const
+\item 
+\mbox{\Hypertarget{classVertex_a4427952db4781f61eb336fe5965da708}\label{classVertex_a4427952db4781f61eb336fe5965da708}} 
+void {\bfseries set\+Processing} (bool p)
+\item 
+int \mbox{\hyperlink{classVertex_af9405dc0ec7ebc2aa7562bd918dfb93f}{get\+Distance}} ()
+\item 
+const vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $>$ \& \mbox{\hyperlink{classVertex_a25cb5b7136d1a53fcf2ccd437ea95641}{get\+Adj}} () const
+\item 
+int \mbox{\hyperlink{classVertex_a28f9b887457c3be89df2aa1893dd69d8}{get\+Arrival}} ()
+\item 
+\mbox{\Hypertarget{classVertex_ac17688dd9f2c7387d45d0eefbbb1a99b}\label{classVertex_ac17688dd9f2c7387d45d0eefbbb1a99b}} 
+void {\bfseries set\+Adj} (const vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $>$ \&adj)
+\item 
+void \mbox{\hyperlink{classVertex_aa4268d04bef6163272b44e7e9740fa9b}{add\+Edge}} (\mbox{\hyperlink{classVertex}{Vertex}} $\ast$dest, \mbox{\hyperlink{classAirline}{Airline}} h)
+\item 
+\mbox{\Hypertarget{classVertex_afae5197a2bdeaae6d19900ef0133c7ea}\label{classVertex_afae5197a2bdeaae6d19900ef0133c7ea}} 
+void \mbox{\hyperlink{classVertex_afae5197a2bdeaae6d19900ef0133c7ea}{add\+Arrival}} ()
+\begin{DoxyCompactList}\small\item\em increases the count of incoming edges \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVertex_a0fb9defc6bc64bd16e51bcf867c511cf}\label{classVertex_a0fb9defc6bc64bd16e51bcf867c511cf}} 
+bool {\bfseries remove\+Edge\+To} (\mbox{\hyperlink{classVertex}{Vertex}} $\ast$d)
+\item 
+\mbox{\Hypertarget{classVertex_ab7cc4193c868b9be770b13d2d704bcf2}\label{classVertex_ab7cc4193c868b9be770b13d2d704bcf2}} 
+void {\bfseries setnum} (int x)
+\item 
+\mbox{\Hypertarget{classVertex_ab8c7d783fc04bfaf3915fe925a45e95e}\label{classVertex_ab8c7d783fc04bfaf3915fe925a45e95e}} 
+void {\bfseries setlow} (int x)
+\item 
+\mbox{\Hypertarget{classVertex_ae04c780407bba0c51b2fea6a29ed08fd}\label{classVertex_ae04c780407bba0c51b2fea6a29ed08fd}} 
+int {\bfseries getnum} ()
+\item 
+\mbox{\Hypertarget{classVertex_a2fe63798ebdf0098f8b47d51e9e279c1}\label{classVertex_a2fe63798ebdf0098f8b47d51e9e279c1}} 
+int {\bfseries getlow} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVertex_afab89afd724f1b07b1aaad6bdc61c47a}\label{classVertex_afab89afd724f1b07b1aaad6bdc61c47a}} 
+class {\bfseries Graph}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vertices representing airports. 
+
+Definition at line 33 of file Graph.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVertex_ae2f4457998996cf77127f3f5a2737c93}\label{classVertex_ae2f4457998996cf77127f3f5a2737c93}} 
+\index{Vertex@{Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{Vertex()}{Vertex()}}
+{\footnotesize\ttfamily Vertex\+::\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAirport}{Airport}}}]{in }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classVertex}{Vertex}} constructor 
+\begin{DoxyParams}{Parameters}
+{\em in} & corresponding airport \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file Graph.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 : info(in) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVertex_aa4268d04bef6163272b44e7e9740fa9b}\label{classVertex_aa4268d04bef6163272b44e7e9740fa9b}} 
+\index{Vertex@{Vertex}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Vertex\+::add\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}} $\ast$}]{dest,  }\item[{\mbox{\hyperlink{classAirline}{Airline}}}]{h }\end{DoxyParamCaption})}
+
+add an outgoing edge associated with this vertex 
+\begin{DoxyParams}{Parameters}
+{\em dest} & destination of the edge \\
+\hline
+{\em h} & airline \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 111 of file Graph.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{111                                          \{}
+\DoxyCodeLine{112     this-\/>adj.push\_back(\mbox{\hyperlink{classEdge}{Edge}}(d,w));}
+\DoxyCodeLine{113 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classVertex_a25cb5b7136d1a53fcf2ccd437ea95641}\label{classVertex_a25cb5b7136d1a53fcf2ccd437ea95641}} 
+\index{Vertex@{Vertex}!getAdj@{getAdj}}
+\index{getAdj@{getAdj}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getAdj()}{getAdj()}}
+{\footnotesize\ttfamily const vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $>$ \& Vertex\+::get\+Adj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+list of outgoing edges 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file Graph.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                          \{}
+\DoxyCodeLine{65     \textcolor{keywordflow}{return} adj;}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classVertex_a28f9b887457c3be89df2aa1893dd69d8}\label{classVertex_a28f9b887457c3be89df2aa1893dd69d8}} 
+\index{Vertex@{Vertex}!getArrival@{getArrival}}
+\index{getArrival@{getArrival}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getArrival()}{getArrival()}}
+{\footnotesize\ttfamily int Vertex\+::get\+Arrival (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+arrival variable value 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file Graph.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{121                        \{}
+\DoxyCodeLine{122     \textcolor{keywordflow}{return} this-\/>arrival;}
+\DoxyCodeLine{123 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classVertex_af9405dc0ec7ebc2aa7562bd918dfb93f}\label{classVertex_af9405dc0ec7ebc2aa7562bd918dfb93f}} 
+\index{Vertex@{Vertex}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily int Vertex\+::get\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+distance variable value 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file Graph.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                         \{}
+\DoxyCodeLine{34     \textcolor{keywordflow}{return} distance;}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classVertex_a067ae9a9e0b3116325e3ceaaf5bc594b}\label{classVertex_a067ae9a9e0b3116325e3ceaaf5bc594b}} 
+\index{Vertex@{Vertex}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAirport}{Airport}} Vertex\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+corresponding airport 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file Graph.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                               \{}
+\DoxyCodeLine{18     \textcolor{keywordflow}{return} info;}
+\DoxyCodeLine{19 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classVertex_aa4bd82105b85ee53a917391f4811cd8a}\label{classVertex_aa4bd82105b85ee53a917391f4811cd8a}} 
+\index{Vertex@{Vertex}!isVisited@{isVisited}}
+\index{isVisited@{isVisited}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{isVisited()}{isVisited()}}
+{\footnotesize\ttfamily bool Vertex\+::is\+Visited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+visited value 
+\end{DoxyReturn}
+
+
+Definition at line 56 of file Graph.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                              \{}
+\DoxyCodeLine{57     \textcolor{keywordflow}{return} visited;}
+\DoxyCodeLine{58 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Graph.\+h\item 
+Graph.\+cpp\end{DoxyCompactItemize}
